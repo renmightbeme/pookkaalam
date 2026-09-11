@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desktop Chaos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- All layers are transparent with pointer-events: none by default -->
+  <div id="chaos-stage">
+    <!-- Layer for flowers -->
+    <div id="flower-container"></div>
+
+    <!-- Layer for roaming cat -->
+    <div id="cat-container"></div>
+
+    <!-- Layer for zooming F1 car -->
+    <div id="f1-container"></div>
+
+    <!-- Layer for popups and alerts -->
+    <div id="popup-container"></div>
+
+    <!-- Always visible exit button in the corner -->
+    <div id="quit-button" class="interactive" title="Stop Desktop Chaos completely">
+      ☠ QUIT CHAOS
+    </div>
+
+    <!-- Minimal counter badge -->
+    <div id="deleted-counter" class="interactive" title="Flowers deleted so far">
+      🌸 Deleted: <span id="counter-value">0</span>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

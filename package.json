@@ -1,0 +1,41 @@
+{
+  "name": "desktop-chaos",
+  "version": "1.0.0",
+  "description": "A deliberately useless desktop application designed to randomly interrupt user productivity.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "keywords": [
+    "desktop-chaos",
+    "electron",
+    "useless-app",
+    "overlay"
+  ],
+  "author": "Desktop Chaos Team",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.desktopchaos.app",
+    "productName": "Desktop Chaos",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "files": [
+      "**/*",
+      "!dist/*"
+    ]
+  },
+  "allowScripts": {
+    "electron@31.7.7": true
+  }
+}
